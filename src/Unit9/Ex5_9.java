@@ -32,12 +32,14 @@ public class Ex5_9 {
 
                 studentName2 = studentName1;
                 studentName1 = name;
+
             }
 
             else if (grade > grade2){
 
                 grade2 = grade;
                 studentName2 = name;
+
             }
 
             --studentNum;

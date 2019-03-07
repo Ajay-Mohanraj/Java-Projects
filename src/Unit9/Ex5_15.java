@@ -6,13 +6,13 @@ public class Ex5_15 {
 
         int count10 = 0;
 
-        for (int i = 33; i <= 126; i++){
+        for (int i = 33; i <= 126; i++) {
 
             System.out.printf("%c ", i);
 
             count10++;
 
-            if (count10 % 10 == 0){
+            if (count10 % 10 == 0) {
 
                 System.out.println();
 
