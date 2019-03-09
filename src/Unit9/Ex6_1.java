@@ -3,7 +3,9 @@ package Unit9;
 public class Ex6_1 {
 
     public static int getPentagonalNumber(int n){
+
         return (n * (3 * n - 1) / 2);
+
     }
     public static void main(String[] args) {
 
@@ -12,6 +14,7 @@ public class Ex6_1 {
         for (int i = 1; i <= 100; i++){
 
             System.out.printf("%7d", getPentagonalNumber(i));
+
             ++counter;
 
             if (counter % 10 == 0){
@@ -19,9 +22,7 @@ public class Ex6_1 {
                 System.out.println();
 
             }
-
         }
     }
-
 }
 

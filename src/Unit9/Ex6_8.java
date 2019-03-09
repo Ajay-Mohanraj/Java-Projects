@@ -16,7 +16,7 @@ public class Ex6_8 {
 
     public static void main(String[] args) {
 
-        System.out.printf("%13s %13s %5c %13s %13s", "Celsius", "Fahrenheit", '|', "Fahrenheit", "Celsius\n");
+        System.out.printf("%13s %13s %5c %13s %14s", "Celsius", "Fahrenheit", '|', "Fahrenheit", "Celsius\n");
 
         double c = 40;
 
@@ -27,6 +27,5 @@ public class Ex6_8 {
             c--;
 
         }
-
     }
 }

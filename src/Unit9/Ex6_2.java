@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Ex6_2 {
 
-    public static long sumDigits(long n) {
+    public static long sumDigits(long n){
 
         int sum = 0;
 
@@ -17,7 +17,7 @@ public class Ex6_2 {
 
         return sum;
 
-}
+    }
 
     public static void main(String[] args) {
 
