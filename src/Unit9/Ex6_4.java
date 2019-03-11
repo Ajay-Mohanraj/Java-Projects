@@ -1,5 +1,7 @@
 package Unit9;
 
+import java.util.Scanner;
+
 public class Ex6_4 {
 
     public static void reverse(int num){
@@ -19,7 +21,12 @@ public class Ex6_4 {
 
     public static void main(String[] args) {
 
-        reverse(123);
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter the number you would like to reverse: ");
+        int num = input.nextInt();
+
+        reverse(num);
 
     }
 }

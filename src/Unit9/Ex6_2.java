@@ -30,6 +30,5 @@ public class Ex6_2 {
 
         System.out.println(value);
 
-
     }
 }
