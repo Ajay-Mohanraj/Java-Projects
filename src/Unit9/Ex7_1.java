@@ -1,8 +1,10 @@
 package Unit9;
 
 import java.util.Scanner;
+
 public class Ex7_1 {
-    public static void main(String[] args) {
+
+    public static void main(String[] args){
 
         Scanner input = new Scanner(System.in);
 
@@ -18,32 +20,47 @@ public class Ex7_1 {
             studentGrades[i] = input.nextInt();
 
         }
+
         for (int num : studentGrades){
 
-            if (num > highestGrade) {
-                highestGrade = num;
-            }
+            if (num > highestGrade){
 
+                highestGrade = num;
+
+            }
         }
 
         for (int i = 0; i < studentGrades.length; i++){
 
             if (studentGrades[i] >= highestGrade - 10){
+
                 System.out.printf("Student %d score is %d and grade is A\n", i, studentGrades[i]);
-            }
-            else if (studentGrades[i] >= highestGrade - 20){
-                System.out.printf("Student %d score is %d and grade is B\n", i, studentGrades[i]);
-            }
-            else if (studentGrades[i] >= highestGrade - 30){
-                System.out.printf("Student %d score is %d and grade is C\n", i, studentGrades[i]);
-            }
-            else if (studentGrades[i] >= highestGrade - 40){
-                System.out.printf("Student %d score is %d and grade is D\n", i, studentGrades[i]);
-            }
-            else{
-                System.out.printf("Student %d score is %d and grade is F\n", i, studentGrades[i]);
+
             }
 
+            else if (studentGrades[i] >= highestGrade - 20){
+
+                System.out.printf("Student %d score is %d and grade is B\n", i, studentGrades[i]);
+
+            }
+
+            else if (studentGrades[i] >= highestGrade - 30){
+
+                System.out.printf("Student %d score is %d and grade is C\n", i, studentGrades[i]);
+
+            }
+
+            else if (studentGrades[i] >= highestGrade - 40){
+
+                System.out.printf("Student %d score is %d and grade is D\n", i, studentGrades[i]);
+
+            }
+
+            else {
+
+                System.out.printf("Student %d score is %d and grade is F\n", i, studentGrades[i]);
+
+            }
         }
     }
 }
