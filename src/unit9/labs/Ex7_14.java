@@ -32,6 +32,7 @@ public class Ex7_14 {
         int e = input.nextInt();
 
         System.out.printf("The GCF for this set of numbers is: %dn\n", gcd(a, b, c, d, e));
+
     }
 }
 
