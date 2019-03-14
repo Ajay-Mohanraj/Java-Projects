@@ -78,9 +78,13 @@ public class Day11_ArrayFundamentals {
 	 * example, rotateRight ({9, 12, 14, 43}) becomes {43, 9, 12, 14}.
 	 */
 	public static void rotateRight(int[] nums) {
-		//
-		// TODO
-		// 
+
+		int temp = nums[nums.length - 1];
+		for (int i = nums.length - 1; i > 0; i--){
+			nums[i] = nums[i - 1];
+		}
+		nums[0] = temp;
+
 	}
 
 	/**
@@ -89,9 +93,10 @@ public class Day11_ArrayFundamentals {
 	 * 8, 16, 2, 29}.
 	 */
 	public static void swap(int[] nums, int p1, int p2) {
-		//
-		// TODO
-		// 
+
+		int t = nums[p1];
+		nums[p1] = nums[p2];
+		nums[p2] = t;
 
 	}
 
@@ -100,10 +105,12 @@ public class Day11_ArrayFundamentals {
 	 * For example, reverse ({5, 19, 2, 6}) returns {6, 2, 19, 5}.
 	 */
 	public static int[] reverse(int[] a) {
-		//
-		// TODO
-		// 
-		return new int[0];
+
+		int[] array = new int[a.length];
+		for (int i = 0; i < a.length; i++){
+			array[array.length - 1 - i] = a[i];
+		}
+		return array;
 	}
 
 	/**
@@ -114,14 +121,21 @@ public class Day11_ArrayFundamentals {
 	 * 
 	 */
 	public static boolean isPalindrome(int[] nums) {
-		//
-		// TODO
-		// 
-		return false;
+
+		boolean palindrome = true;
+
+		for (int i = 0; i < nums.length / 2; i++){
+			if (nums[i] != nums[nums.length - 1 - i]){
+				palindrome = false;
+			}
+
+
+		}
+		return palindrome;
 	}
 
 	/**
-	 * Returns the position of the first matching pair of numbers in the array.
+	 * Returns the position of the first matching pair of numbers in the afrray.
 	 * For example, for the array {9, 17, 24, 24, 9, 4, 4, 18}, the function
 	 * returns 2 since the first pair (24) begins at position 2.
 	 */
