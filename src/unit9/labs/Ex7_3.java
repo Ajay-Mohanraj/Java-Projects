@@ -20,7 +20,7 @@ public class Ex7_3 {
 
         }
 
-        for (int i = 1; i <= 100; i++){
+        for (int i = 0; i <= 100; i++){
 
             if (quantity[i] > 0){
 

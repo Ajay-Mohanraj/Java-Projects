@@ -10,9 +10,9 @@ public class Ex7_1 {
 
         System.out.print("Enter the number of students: ");
         int studentNum = input.nextInt();
+        int[] studentGrades = new int[studentNum];
 
         System.out.printf("Enter %d scores, separated by spaces: ", studentNum);
-        int[] studentGrades = new int[studentNum];
         int highestGrade = -1;
 
         for (int i = 0; i < studentGrades.length; i++){
