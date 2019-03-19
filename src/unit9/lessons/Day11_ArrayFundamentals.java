@@ -140,10 +140,14 @@ public class Day11_ArrayFundamentals {
 	 * returns 2 since the first pair (24) begins at position 2.
 	 */
 	public static int firstPairPosition(int[] nums) {
-		//
-		// TODO
-		// 
-		return 0;
+
+
+		for (int i = 0; i < nums.length - 1; i++){
+			if (nums[i] == nums[i+1]){
+				return i;
+			}
+		}
+		return -1;
 	}
 
 	/**
@@ -152,11 +156,15 @@ public class Day11_ArrayFundamentals {
 	 * returns 5 since the last pair (4) begins at position 5.
 	 */
 	public static int lastPairPosition(int[] nums) {
-		//
-		// TODO
-		// 
-		return 0;
+
+		for (int i = nums.length-2; i >= 0; i--){
+			if (nums[i] == nums[i+1]){
+				return i;
+			}
+		}
+		return -1;
 	}
+
 
 	public static void main(String[] args) {
 		int[] a = { 19, 12, 45, 1, 4, 19, 21, 12, 45, 3 };
