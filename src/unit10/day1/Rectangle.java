@@ -1,11 +1,11 @@
 package unit10.day1;
 
 public class Rectangle {
-    public Point p1, p2;
+    private Point p1, p2;
 
     public Rectangle(Point pt1, Point pt2){
-        p1 = pt1;
-        p2 = pt2;
+        p1 = new Point(pt1);
+        p2 = new Point(pt2);
     }
     public double getWidth(){
         return Math.abs(p1.x - p2.x);
@@ -22,5 +22,22 @@ public class Rectangle {
     public void translate(double dx, double dy){
         p1.translate(dx, dy);
         p2.translate(dx, dy);
+    }
+    public void dilate(double factor){
+        p1.dilate(factor);
+        p2.dilate(factor);
+    }
+    public Point getPoint1(){
+        return new Point(p1);
+    }
+    public Point getPoint2(){
+        return new Point(p2);
+    }
+    public void setPoint1(Point p){
+        p1 = new Point(p);
+    }
+    // public void setPoint2(Point)
+    public String toString(){
+        return "Rectangle: " + p1 + "; " + p2;
     }
 }
