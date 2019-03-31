@@ -1,4 +1,4 @@
-package unit10.day1;
+package unit10.lessons.RectangleObject;
 
 public class Rectangle {
     private Point p1, p2;

@@ -63,9 +63,7 @@ public class Day11_ArrayFundamentals {
 	public static void rotateLeft(int[] nums) {
 
 		int temp = nums[0];
-		//nums[0] = nums[nums.length - 1];
-		// nums[nums.length - 1] = temp;
-		for (int i = 0; i <= nums.length - 2; i++){
+		for (int i = 0; i < nums.length - 1; i++){
 			nums[i] = nums[i + 1];
 
 		}
@@ -122,20 +120,20 @@ public class Day11_ArrayFundamentals {
 	 */
 	public static boolean isPalindrome(int[] nums) {
 
-		boolean palindrome = true;
+
 
 		for (int i = 0; i < nums.length / 2; i++){
-			if (nums[i] != nums[nums.length - 1 - i]){
-				palindrome = false;
+			if (nums[nums.length - 1 - i] != nums[i]){
+				return false;
 			}
 
 
 		}
-		return palindrome;
+		return true;
 	}
 
 	/**
-	 * Returns the position of the first matching pair of numbers in the afrray.
+	 * Returns the position of the first matching pair of numbers in the array.
 	 * For example, for the array {9, 17, 24, 24, 9, 4, 4, 18}, the function
 	 * returns 2 since the first pair (24) begins at position 2.
 	 */

@@ -1,4 +1,4 @@
-package unit10.day1;
+package unit10.lessons.RectangleObject;
 
 public class Tester {
     public static void main(String[] args) {

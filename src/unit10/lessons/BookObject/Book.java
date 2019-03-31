@@ -1,4 +1,4 @@
-package unit10.day3.BookObject;
+package unit10.lessons.BookObject;
 
 public class Book {
     private static int numBooks = 0;

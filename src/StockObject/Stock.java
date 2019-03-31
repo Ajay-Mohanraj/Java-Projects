@@ -1,4 +1,4 @@
-package unit10.day3.StockObject;
+package StockObject;
 
 public class Stock {
     private static int numCompanies = 0;
