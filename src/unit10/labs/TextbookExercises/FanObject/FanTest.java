@@ -1,4 +1,4 @@
-package unit10.labs.FanObject;
+package unit10.labs.TextbookExercises.FanObject;
 
 public class FanTest {
 

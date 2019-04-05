@@ -1,4 +1,4 @@
-package unit10.labs.AccountObject;
+package unit10.labs.TextbookExercises.AccountObject;
 
 public class AccountTester {
 	public static void main (String[] args) {
