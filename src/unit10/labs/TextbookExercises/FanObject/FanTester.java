@@ -1,6 +1,6 @@
 package unit10.labs.TextbookExercises.FanObject;
 
-public class FanTest {
+public class FanTester {
 
 	public static void main(String[] args) {
 		Fan f1 = new Fan();
