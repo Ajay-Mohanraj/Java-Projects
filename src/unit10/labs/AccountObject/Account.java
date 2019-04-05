@@ -10,7 +10,7 @@ public class Account {
     private Date dateCreated = new Date();
 
     public Account(){
-        new Account();
+
     }
 
     public int getId() {
@@ -42,8 +42,7 @@ public class Account {
     }
 
     public double getMonthlyInterestRate() {
-        double annualInterestDecimal = annualInterestRate / 100;
-        return (annualInterestDecimal / 12);
+        return (annualInterestRate / 12);
     }
 
     public double getMonthlyInterest(){
