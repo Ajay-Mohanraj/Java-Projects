@@ -56,7 +56,4 @@ public class Fan {
             return ("Fan is off; Color: " + color + "; radius: " + radius);
         }
     }
-
-
-
 }
