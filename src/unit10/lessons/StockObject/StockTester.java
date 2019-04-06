@@ -1,4 +1,4 @@
-package StockObject;
+package unit10.lessons.StockObject;
 
 public class StockTester {
     public static void main(String[] args) {

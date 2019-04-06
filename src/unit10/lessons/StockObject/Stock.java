@@ -1,4 +1,4 @@
-package StockObject;
+package unit10.lessons.StockObject;
 
 public class Stock {
     private static int numCompanies = 0;

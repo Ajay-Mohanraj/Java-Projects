@@ -17,7 +17,7 @@ public class Day09_DialogBoxes {
         if (name != null){
             JOptionPane.showMessageDialog(null, "Hello, " + name);
         }
-        else{
+        else {
             JOptionPane.showMessageDialog(null, "Hello anonymous");
         }
     }

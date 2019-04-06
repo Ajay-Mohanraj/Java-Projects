@@ -4,7 +4,7 @@ import java.util.*;
 import java.io.FileReader;
 
 public class Day09_Split {
-    public static void main(String[] args) throws Exception{
+    public static void main(String[] args) throws Exception {
 
         Scanner in = new Scanner(new FileReader("names.txt"));
 
