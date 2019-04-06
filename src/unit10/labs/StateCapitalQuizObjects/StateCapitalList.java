@@ -1,14 +1,11 @@
 package unit10.labs.StateCapitalQuizObjects;
 
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.util.ArrayList;
-import java.util.Random;
-import java.util.Scanner;
+import java.io.*;
+import java.util.*;
 
 public class StateCapitalList {
 
-    private ArrayList<StateCapital> stateCapitalList = new ArrayList<>();
+    public ArrayList<StateCapital> stateCapitalList = new ArrayList<>();
 
     public StateCapitalList(String filename) throws FileNotFoundException {
 
@@ -18,8 +15,8 @@ public class StateCapitalList {
 
             String line = in.nextLine();
             String[] combo = line.split(":");
-            // StateCapital add = new StateCapital(combo[0], combo[1]);
-            stateCapitalList.add(new StateCapital(combo[0], combo[1]));
+            StateCapital add = new StateCapital(combo[0], combo[1]);
+            stateCapitalList.add(add);
 
         }
     }
@@ -39,7 +36,14 @@ public class StateCapitalList {
 
     public void remove(StateCapital sc){
 
-        stateCapitalList.remove(sc);
+        for (int i = 0; i < stateCapitalList.size(); i++){
+
+            if (stateCapitalList.get(i).getState().equals(sc.getState())){
+
+                stateCapitalList.remove(i);
+                // break;
+            }
+        }
 
     }
 

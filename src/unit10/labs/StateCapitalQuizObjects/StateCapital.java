@@ -26,7 +26,7 @@ public class StateCapital {
 
     public boolean equals(Object o){
 
-        StateCapital newO = (StateCapital)o;
+        StateCapital newO = (StateCapital) o;
 
         return this.state.equals(newO.state);
 
