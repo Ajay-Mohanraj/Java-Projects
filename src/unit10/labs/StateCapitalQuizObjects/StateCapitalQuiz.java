@@ -19,11 +19,24 @@ public class StateCapitalQuiz {
 
             while (input != null && stateCapitalList.statesRemaining() > 0){
 
+                int correct = 0;
+                int guesses = 0;
+
                 StateCapital state = stateCapitalList.getRandomState();
-                input = (String) JOptionPane.showInputDialog("What is the capital of " + (state.getState()));
+                input = (String) JOptionPane.showInputDialog("What is the capital of " + (state.getState()) + "?");
                 if (state.getCapital().equals(input)){
+                    correct++;
+                    guesses++;
                     stateCapitalList.remove(state);
+
                 }
+                else if (input == null) {
+                    JOptionPane.showMessageDialog(null, "You named " + correct + " capitals in " + guesses + " guesses.");
+                }
+                else {
+                    JOptionPane.showMessageDialog(null, "Incorrect. The capital is " + state.getCapital() + ".");
+                }
+
             }
         }
         else {
