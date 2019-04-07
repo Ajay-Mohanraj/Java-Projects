@@ -41,10 +41,8 @@ public class StateCapitalList {
             if (stateCapitalList.get(i).getState().equals(sc.getState())){
 
                 stateCapitalList.remove(i);
-                // break;
+
             }
         }
-
     }
-
 }
