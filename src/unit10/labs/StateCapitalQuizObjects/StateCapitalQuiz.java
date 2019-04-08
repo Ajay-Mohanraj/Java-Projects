@@ -46,7 +46,7 @@ public class StateCapitalQuiz {
 
                         if (stateCapitalList.statesRemaining() == 0) {
 
-                            JOptionPane.showMessageDialog(null, "Congratulations. You named " + correct + " capitals in " + guesses + " guesses.");
+                            JOptionPane.showMessageDialog(null, "Congratulations. You named " + correct + " capitals in " + guesses + " guess(es).");
 
                         }
                     }

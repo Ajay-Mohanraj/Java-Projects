@@ -36,9 +36,9 @@ public class StateCapitalList {
 
     public void remove(StateCapital sc){
 
-        for (int i = 0; i < stateCapitalList.size(); i++){
+        for (int i = 0; i < stateCapitalList.size(); i++) {
 
-            if (stateCapitalList.get(i).getState().equals(sc.getState())){
+            if (stateCapitalList.get(i).getState().equals(sc.getState())) {
 
                 stateCapitalList.remove(i);
 
