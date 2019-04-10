@@ -1,3 +1,9 @@
+/*
+ID: ajamoh21
+LANG: JAVA
+TASK: gift1
+*/
+
 package unit10.usaco.section1_1;
 
 import java.io.*;
