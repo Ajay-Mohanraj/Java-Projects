@@ -81,7 +81,7 @@ public class gift1 {
 
         for (String key : names) {
 
-            System.out.println(key + " " + nameMap.get(key));
+            out.println(key + " " + nameMap.get(key));
         }
 
         out.close();
