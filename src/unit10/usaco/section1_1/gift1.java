@@ -20,6 +20,9 @@ public class gift1 {
         // Add each name to the array.  Then add the name to the nameMap with 0 dollars.  (Use put.)
         //
 
+        for (int i = 0; i <= np; i++) {
+            nameMap.put();
+        }
         String giver = in.readLine();  // Read the name of the first giver
         while (giver != null) {
             StringTokenizer st = new StringTokenizer(in.readLine(), " ");
