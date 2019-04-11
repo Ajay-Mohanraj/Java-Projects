@@ -1,9 +1,10 @@
 package unit10.lessons.RectangleObject;
 
-public class Rectangle {
+public class Rectangle extends Shape {
     private Point p1, p2;
 
     public Rectangle(Point pt1, Point pt2){
+        super("Rectangle");
         p1 = new Point(pt1);
         p2 = new Point(pt2);
     }
@@ -38,6 +39,6 @@ public class Rectangle {
     }
     // public void setPoint2(Point)
     public String toString(){
-        return "Rectangle: " + p1 + "; " + p2;
+        return super.toString() + ": " + p1 + "; " + p2;
     }
 }

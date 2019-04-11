@@ -13,12 +13,12 @@ public class Point {
         this.y = p.y;
     }
     public void translate(double dx, double dy){
-        x += dx;
-        y += dy;
+        this.x += dx;
+        this.y += dy;
     }
     public void dilate(double factor){
-        x *= factor;
-        y *= factor;
+        this.x *= factor;
+        this.y *= factor;
     }
     public String toString(){
         return "(" + x + ", " + y + ")";
