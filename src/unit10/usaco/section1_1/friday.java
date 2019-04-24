@@ -13,23 +13,22 @@ public class friday {
 	static final int START_YEAR = 1900;
 
 
-	public static boolean isLeapYear (int year)
-	{
-		//
-		// TODO: Implement this function to determine if a given year is a leap year.
-		//
-		if (year % 4 == 0 && year % 400 != 0) {
-			return (year % 100 != 0);
+	public static boolean isLeapYear (int year) {
+		if (year % 100 == 0) {
+			return year % 400 == 0;
 		}
-		return (year % 4 == 0 && year % 400 == 0);
+
+		else {
+			return year % 4 == 0;
+		}
 	}
 	public static void main(String[] args) throws Exception {
 		// Represents the frequency of the 13th by day of the week.
 		// 1 = Sunday, 2 = Monday, ...
-        int count[] = new int[8];
+        int[] count = new int[7];
 
 		BufferedReader input = new BufferedReader(new FileReader("friday.in"));
-		int endYear = Integer.parseInt(input.readLine()) + START_YEAR - 1;
+		int endYear = Integer.parseInt(input.readLine()) + START_YEAR;
 
 		// 1 = Sunday, 2 = Monday, ...
 		// January 1, 1900 was a Monday.
@@ -37,13 +36,14 @@ public class friday {
 
         // 1 = January, 2 = February, 3 = March, ...
 		// -9999 is just a filler value.  We are not using the 0 position of the array.
-        int[] days = new int[] { -9999, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+        int[] days = {-9999, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 
         // Go progressively through every month from the start year through the end year.
-        for (int year = START_YEAR; year <= endYear; year++) {
+        for (int year = START_YEAR; year < endYear; year++) {
 			if (isLeapYear(year)) {
 				days[2] = 29;
 			}
+			// change back to 28
             for (int month = 1; month <= 12; month++) {
 
             	// TODO
@@ -57,6 +57,7 @@ public class friday {
 					if (i == 13) {
 						++count[firstDayOfMonth % 7];
 					}
+
 
 				}
 				// firstDayOfMonth = days[month]

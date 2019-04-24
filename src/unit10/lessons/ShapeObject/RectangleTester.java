@@ -1,6 +1,4 @@
-package unit10.lessons.RectangleObject;
-
-import org.w3c.dom.css.Rect;
+package unit10.lessons.ShapeObject;
 
 public class RectangleTester {
     public static void main(String[] args) {

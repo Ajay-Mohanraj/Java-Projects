@@ -1,4 +1,4 @@
-package unit10.lessons.RectangleObject;
+package unit10.lessons.ShapeObject;
 
 public abstract class Shape {
 

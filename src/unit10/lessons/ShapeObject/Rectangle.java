@@ -1,4 +1,4 @@
-package unit10.lessons.RectangleObject;
+package unit10.lessons.ShapeObject;
 
 public class Rectangle extends Shape {
     private Point p1, p2;
