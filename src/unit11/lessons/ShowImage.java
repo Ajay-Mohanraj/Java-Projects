@@ -1,4 +1,4 @@
-package unit10.lessons;
+package unit11.lessons;
 
 import javafx.application.Application;
 import javafx.geometry.Insets;
@@ -13,7 +13,7 @@ public class ShowImage extends Application {
     public void start(Stage primaryStage) {
         Pane pane = new HBox(10);
         pane.setPadding(new Insets(5, 5, 5, 5));
-        Image image = new Image("image/us.gif");
+        Image image = new Image("images/us.gif");
         pane.getChildren().add(new ImageView(image));
 
         ImageView imageView2 = new ImageView(image);
