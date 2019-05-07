@@ -11,6 +11,8 @@ import javafx.scene.shape.Line;
 import javafx.stage.Stage;
 
 public class Ex14_10 extends Application {
+
+    @Override
     public void start(Stage primaryStage) {
 
         Pane pane = new Pane();
@@ -19,16 +21,17 @@ public class Ex14_10 extends Application {
         top.setFill(Color.WHITE);
         top.setStroke(Color.BLACK);
         top.radiusXProperty().bind(pane.widthProperty().divide(2).subtract(10));
-        top.radiusYProperty().bind(pane.heightProperty().divide(2).subtract(10));
         top.centerXProperty().bind(pane.widthProperty().divide(2));
         top.centerYProperty().bind(pane.heightProperty().divide(2));
         pane.getChildren().add(top);
 
-        Line leftLine = new Line(top.getCenterX()-top.getRadiusX(), top.getCenterY(), top.getCenterX()-top.getRadiusX(), top.getCenterY()+125);
-        leftLine.radiusXProperty().bind(widthProperty().divide(2).subtract(10));
-        leftLine.radiusYProperty().bind(heightProperty().divide(2).subtract(10));
-        leftLine.centerXProperty().bind(widthProperty().divide(2));
-        leftLine.centerYProperty().bind(heightProperty().divide(2));
+        //Line leftLine = new Line(top.getCenterX()-top.getRadiusX(), top.getCenterY(), top.getCenterX()-top.getRadiusX(), top.getCenterY()+125);
+        Line leftLine = new Line();
+        leftLine.startXProperty().bind(top.centerXProperty().subtract(top.radiusXProperty()));
+        leftLine.startYProperty().bind(top.centerYProperty());
+        leftLine.setEndX(0);
+        leftLine.setEndY(0);
+
         pane.getChildren().add(leftLine);
 
 
