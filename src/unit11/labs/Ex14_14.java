@@ -1,7 +1,6 @@
 package unit11.labs;
 
 import javafx.application.Application;
-import javafx.scene.layout.BorderStrokeStyle;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
@@ -32,28 +31,57 @@ public class Ex14_14 extends Application {
         r2.heightProperty().bind(pane.heightProperty().subtract(SIDE / 1));
         r2.setFill(Color.TRANSPARENT);
         r2.setStroke(Color.BLACK);
+        r2.setStrokeWidth(2);
         r1.getStrokeDashArray().addAll(6.0, 21.0);
 
         Line line1 = new Line(r2.getX(), r2.getY(), r1.getX(), r1.getY());
+        line1.setStrokeWidth(2);
 
         Line line2 = new Line();
         line2.setStartX(r2.getX());
         line2.setEndX(r1.getX());
         line2.startYProperty().bind(r2.yProperty().add(r2.heightProperty()));
         line2.endYProperty().bind(r1.yProperty().add(r1.heightProperty()));
+        line2.getStrokeDashArray().addAll(6.0, 21.0);
 
         Line line3 = new Line();
         line3.setStartY(r2.getY());
         line3.setEndY(r1.getY());
         line3.startXProperty().bind(r2.xProperty().add(r2.widthProperty()));
         line3.endXProperty().bind(r1.xProperty().add(r1.widthProperty()));
+        line3.setStrokeWidth(2);
 
         Line line4 = new Line();
         line4.startXProperty().bind(r2.xProperty().add(r2.widthProperty()));
         line4.startYProperty().bind(r2.yProperty().add(r2.heightProperty()));
         line4.endXProperty().bind(r1.xProperty().add(r1.widthProperty()));
         line4.endYProperty().bind(r1.yProperty().add(r1.heightProperty()));
+        line4.setStrokeWidth(2);
         pane.getChildren().addAll(r1, r2, line1, line2, line3, line4);
+
+//        Line coverLine1 = new Line();
+//        coverLine1.startXProperty().bind(r1.xProperty());
+//        coverLine1.startYProperty().bind(r1.yProperty().add(r1.heightProperty()));
+//        coverLine1.endXProperty().bind(r1.xProperty());
+//        coverLine1.endYProperty().bind(r1.yProperty());
+//        coverLine1.setStrokeWidth(2);
+//        pane.getChildren().add(coverLine1);
+
+        Line coverLine1 = new Line();
+        coverLine1.startXProperty().bind(r1.xProperty());
+        coverLine1.startYProperty().bind(r1.yProperty());
+        coverLine1.endXProperty().bind(r1.xProperty().add(r1.widthProperty()));
+        coverLine1.endYProperty().bind(r1.yProperty());
+        coverLine1.setStrokeWidth(2);
+        pane.getChildren().add(coverLine1);
+
+        Line coverLine2 = new Line();
+        coverLine2.startXProperty().bind(r1.xProperty().add(r1.widthProperty()));
+        coverLine2.startYProperty().bind(r1.yProperty());
+        coverLine2.endXProperty().bind(r1.xProperty().add(r1.widthProperty()));
+        coverLine2.endYProperty().bind(r1.yProperty().add(r1.heightProperty()));
+        coverLine2.setStrokeWidth(2);
+        pane.getChildren().add(coverLine2);
 
         StackPane sPane = new StackPane();
         sPane.setAlignment(Pos.CENTER);

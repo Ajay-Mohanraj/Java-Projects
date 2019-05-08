@@ -20,7 +20,7 @@ public class Ex14_10 extends Application {
         Ellipse top = new Ellipse(100, 100, 50, 25);
         top.setFill(Color.WHITE);
         top.setStroke(Color.BLACK);
-        top.radiusXProperty().bind(pane.widthProperty().divide(2).subtract(10));
+        top.radiusXProperty().bind(pane.widthProperty().divide(4).subtract(10));
         top.centerXProperty().bind(pane.widthProperty().divide(2));
         top.centerYProperty().bind(pane.heightProperty().divide(4));
         pane.getChildren().add(top);
