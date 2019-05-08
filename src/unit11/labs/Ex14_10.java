@@ -22,7 +22,7 @@ public class Ex14_10 extends Application {
         top.setStroke(Color.BLACK);
         top.radiusXProperty().bind(pane.widthProperty().divide(2).subtract(10));
         top.centerXProperty().bind(pane.widthProperty().divide(2));
-        top.centerYProperty().bind(pane.heightProperty().divide(2));
+        top.centerYProperty().bind(pane.heightProperty().divide(4));
         pane.getChildren().add(top);
 
         Arc lowerArc = new Arc();
