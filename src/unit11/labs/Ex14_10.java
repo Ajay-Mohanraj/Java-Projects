@@ -25,24 +25,11 @@ public class Ex14_10 extends Application {
         top.centerYProperty().bind(pane.heightProperty().divide(2));
         pane.getChildren().add(top);
 
-        //Line leftLine = new Line(top.getCenterX()-top.getRadiusX(), top.getCenterY(), top.getCenterX()-top.getRadiusX(), top.getCenterY()+125);
-        Line leftLine = new Line();
-        leftLine.startXProperty().bind(top.centerXProperty().subtract(top.radiusXProperty()));
-        leftLine.startYProperty().bind(top.centerYProperty());
-        leftLine.setEndX(0);
-        leftLine.setEndY(0);
-
-        pane.getChildren().add(leftLine);
-
-
-        Line rightLine = new Line(top.getCenterX()+top.getRadiusX(), top.getCenterY(), top.getCenterX()+top.getRadiusX(), top.getCenterY()+125);
-        pane.getChildren().add(rightLine);
-
         Arc lowerArc = new Arc();
-        lowerArc.setCenterX(top.getCenterX());
-        lowerArc.setCenterY(top.getCenterY()+125);
-        lowerArc.setRadiusX(top.getRadiusX());
-        lowerArc.setRadiusY(top.getRadiusY());
+        lowerArc.centerXProperty().bind((top.centerXProperty()));
+        lowerArc.centerYProperty().bind(top.centerYProperty().add(200));
+        lowerArc.radiusXProperty().bind(top.radiusXProperty());
+        lowerArc.radiusYProperty().bind(top.radiusYProperty());
         lowerArc.setStartAngle(0);
         lowerArc.setLength(-180);
         lowerArc.setType(ArcType.OPEN);
@@ -50,11 +37,27 @@ public class Ex14_10 extends Application {
         lowerArc.setStroke(Color.BLACK);
         pane.getChildren().add(lowerArc);
 
+        Line leftLine = new Line();
+        leftLine.startXProperty().bind(top.centerXProperty().subtract(top.radiusXProperty()));
+        leftLine.startYProperty().bind(top.centerYProperty());
+        leftLine.endXProperty().bind(lowerArc.centerXProperty().subtract(lowerArc.radiusXProperty()));
+        leftLine.endYProperty().bind(lowerArc.centerYProperty());
+
+        Line rightLine = new Line();
+        rightLine.startXProperty().bind(top.centerXProperty().add(top.radiusXProperty()));
+        rightLine.startYProperty().bind(top.centerYProperty());
+        rightLine.endXProperty().bind(lowerArc.centerXProperty().add(lowerArc.radiusXProperty()));
+        rightLine.endYProperty().bind(lowerArc.centerYProperty());
+
+        pane.getChildren().addAll(leftLine, rightLine);
+
+
+
         Arc upperArc = new Arc();
-        upperArc.setCenterX(top.getCenterX());
-        upperArc.setCenterY(top.getCenterY()+125);
-        upperArc.setRadiusX(top.getRadiusX());
-        upperArc.setRadiusY(top.getRadiusY());
+        upperArc.centerXProperty().bind((top.centerXProperty()));
+        upperArc.centerYProperty().bind(top.centerYProperty().add(200));
+        upperArc.radiusXProperty().bind(top.radiusXProperty());
+        upperArc.radiusYProperty().bind(top.radiusYProperty());
         upperArc.setStartAngle(0);
         upperArc.setLength(180);
         upperArc.setType(ArcType.OPEN);
