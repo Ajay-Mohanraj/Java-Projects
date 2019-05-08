@@ -66,7 +66,7 @@ public class Ex14_10 extends Application {
         upperArc.getStrokeDashArray().addAll(6.0, 21.0);
         pane.getChildren().add(upperArc);
 
-        Scene scene = new Scene(pane);
+        Scene scene = new Scene(pane, 400, 400);
         primaryStage.setScene(scene);
         primaryStage.show();
     }
