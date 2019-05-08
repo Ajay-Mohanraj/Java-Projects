@@ -22,8 +22,8 @@ public class Ex14_14 extends Application {
         Pane pane = new Pane();
 
         Rectangle r1 = new Rectangle(SIDE/2, 0, SIDE, SIDE);
-        r1.widthProperty().bind(pane.widthProperty().subtract(SIDE / 2));
-        r1.heightProperty().bind(pane.heightProperty().subtract(SIDE / 1));
+        r1.widthProperty().bind(pane.widthProperty().subtract(SIDE/2));
+        r1.heightProperty().bind(pane.heightProperty().subtract(SIDE));
         r1.setFill(Color.TRANSPARENT);
         r1.setStroke(Color.BLACK);
 
@@ -63,5 +63,6 @@ public class Ex14_14 extends Application {
         Scene scene = new Scene(sPane, 500, 300);
         primaryStage.setScene(scene);
         primaryStage.show();
+
     }
 }
