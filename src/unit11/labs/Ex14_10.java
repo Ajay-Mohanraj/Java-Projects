@@ -55,7 +55,7 @@ public class Ex14_10 extends Application {
 
         Arc upperArc = new Arc();
         upperArc.centerXProperty().bind((top.centerXProperty()));
-        upperArc.centerYProperty().bind(top.centerYProperty().add(200));
+        upperArc.centerYProperty().bind(top.centerYProperty().multiply(3));
         upperArc.radiusXProperty().bind(top.radiusXProperty());
         upperArc.radiusYProperty().bind(top.radiusYProperty());
         upperArc.setStartAngle(0);
