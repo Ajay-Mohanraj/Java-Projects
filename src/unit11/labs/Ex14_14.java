@@ -59,14 +59,6 @@ public class Ex14_14 extends Application {
         line4.setStrokeWidth(2);
         pane.getChildren().addAll(r1, r2, line1, line2, line3, line4);
 
-//        Line coverLine1 = new Line();
-//        coverLine1.startXProperty().bind(r1.xProperty());
-//        coverLine1.startYProperty().bind(r1.yProperty().add(r1.heightProperty()));
-//        coverLine1.endXProperty().bind(r1.xProperty());
-//        coverLine1.endYProperty().bind(r1.yProperty());
-//        coverLine1.setStrokeWidth(2);
-//        pane.getChildren().add(coverLine1);
-
         Line coverLine1 = new Line();
         coverLine1.startXProperty().bind(r1.xProperty());
         coverLine1.startYProperty().bind(r1.yProperty());
