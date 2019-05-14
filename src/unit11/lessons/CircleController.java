@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.MouseButton;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
@@ -16,6 +17,7 @@ public class CircleController extends Application {
     public void start(Stage ps) {
 
         Pane pane = new Pane();
+
         pane.setOnMousePressed(e -> {
             if (e.getButton() == MouseButton.PRIMARY) {
                 c.setRadius(c.getRadius()+1);
