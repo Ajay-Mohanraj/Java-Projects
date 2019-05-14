@@ -6,6 +6,8 @@ TASK: beads
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 
 public class beads {
@@ -26,9 +28,11 @@ public class beads {
 		int longest = 0;
 
 		// wwwbbrwrbrbrrbrbrwrwwrbwrwrrb
-		for (int i = 1; i < len; i++) {
-			int temp = 0;
-			char[] array =
+		for (int i = 0; i < len; i++) {
+			int tempCount = 0;
+			ArrayList<Character> temp1 = new ArrayList<>(beadsList.subList(0, i));
+			ArrayList<Character> temp2 = new ArrayList<>(beadsList.subList(i, beadsList.size()));
+
 		}
 
 		PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("beads.out")));

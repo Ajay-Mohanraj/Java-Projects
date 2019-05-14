@@ -21,15 +21,14 @@ public class Ex15_12 extends Application {
 
 		Text inside = new Text();
 		pane.add(inside, 100, 100);
-		pane.setOnMouseMoved(e -> {
-			double d = Math.pow(Math.pow(e.getX() - circle.getCenterX(), 2) + Math.pow(e.getY() - circle.getCenterY(), 2), .5);
-			if (d <= circle.getRadius() || circle.contains(e.getX(), e.getY())) {
-				inside.setText("Mouse point is inside the circle");
-			}
-			else {
-				inside.setText("Mouse point is outside the circle");
-			}
+
+		circle.setOnMouseEntered(e -> {
+			inside.setText("Mouse point is inside the circle");
 		});
+		circle.setOnMouseExited(e -> {
+			inside.setText("Mouse point is outside the circle");
+		});
+
 
 		Scene scene = new Scene(pane, 500, 200);
 
