@@ -1,20 +1,14 @@
-package unit10.usaco.section1_1;/*
-ID: YOUR_NAME
+package unit10.usaco.section1_1;
+/*
+ID: ajamoh21
 LANG: JAVA
 TASK: beads
 */
 
 import java.io.*;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
 
 public class beads {
-
-//	public double beadHandler(ArrayList<Character> temp1) {
-//
-//	}
 
 	public static void main(String[] args) throws Exception {
 
@@ -32,8 +26,50 @@ public class beads {
 		// longest length of beads so far
 
 		int longest = 0;
+		int initialCount1 = 0;
+		char originalReference1 = '0';
+		if (beadsList.get(0) == 'w') {
+			for (int m = 0; m < beadsList.size(); m++) {
+				if (beadsList.get(m) != 'w') {
+					originalReference1 = beadsList.get(m);
+					break;
+				}
+			}
+		}
+		for (int n = 0; n < beadsList.size(); n++) {
+			if (beadsList.get(n) == originalReference1 || beadsList.get(n) == 'w') {
+				initialCount1++;
+			}
+			else {
+				break;
+			}
+		}
+		if (initialCount1 > longest) {
+			longest = initialCount1;
+		}
+		int initialCount2 = 0;
+		char originalReference2 = '0';
+		if (beadsList.get(beadsList.size()-1) == 'w') {
+			for (int o = beadsList.size()-1; o >= 0; o--) {
+				if (beadsList.get(o) != 'w') {
+					originalReference2 = beadsList.get(o);
+					break;
+				}
+			}
+		}
+		for (int p = beadsList.size()-1; p >= 0; p--) {
+			if (beadsList.get(p) == originalReference2 || beadsList.get(p) == 'w') {
+				initialCount2++;
+			}
+			else {
+				break;
+			}
+		}
+		if (initialCount2 > longest) {
+			longest = initialCount1;
+		}
 
-		//
+		// make for loop through each regular array withiut anything else
 		for (int i = 1; i < len; i++) {
 			int tempCount = 0;
 			ArrayList<Character> temp1 = new ArrayList<>(beadsList.subList(0, i));
@@ -53,16 +89,7 @@ public class beads {
 				}
 			}
 
-			if (temp2.get(0) == 'w') {
-				for (int c = 0; c < temp2.size(); c++) {
 
-					if (temp2.get(c) == 'b' || temp2.get(c) == 'r') {
-						temp4 = new ArrayList<>(temp2.subList(c, temp2.size()));
-						break;
-					}
-					++tempCount;
-				}
-			}
 
 			else if (temp1.get(temp1.size()-1) == 'b') {
 				for (int a = temp1.size()-1; a >= 0; a--) {
@@ -86,7 +113,18 @@ public class beads {
 				}
 			}
 
-			if (temp2.get(0) == 'b') {
+			if (temp2.get(0) == 'w') {
+				for (int c = 0; c < temp2.size(); c++) {
+
+					if (temp2.get(c) == 'b' || temp2.get(c) == 'r') {
+						temp4 = new ArrayList<>(temp2.subList(c, temp2.size()));
+						break;
+					}
+					++tempCount;
+				}
+			}
+
+			else if (temp2.get(0) == 'b') {
 				for (int b = 0; b < temp2.size(); b++) {
 					if (temp2.get(b) != 'r') {
 						++tempCount;
@@ -108,9 +146,10 @@ public class beads {
 				}
 			}
 
+
 			// for loop through temp3 and temp4 using last and first values as checking point for rest
 
-			if (temp3.size() != 0 && temp4.size() != 0) {
+			if (temp3.size() != 0) {
 				char referenceTemp3 = temp3.get(temp3.size()-1);
 				for (int e = temp3.size()-1; e >= 0; e--) {
 					if (temp3.get(e) == referenceTemp3 || temp3.get(e) == 'w') {
@@ -139,13 +178,14 @@ public class beads {
 			}
 
 
+
+		}
+
 		PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("beads.out")));
 
 
-		out.println();//close);
+		out.println(longest);
 		out.close();
 		in.close();
-		}
-		System.out.println(longest);
 	}
 }
