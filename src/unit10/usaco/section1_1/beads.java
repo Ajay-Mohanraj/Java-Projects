@@ -66,14 +66,25 @@ public class beads {
 			}
 		}
 		if (initialCount2 > longest) {
-			longest = initialCount1;
+			longest = initialCount2;
 		}
 
 		// make for loop through each regular array withiut anything else
-		for (int i = 1; i < len; i++) {
+		for (int i = 1; i < len-1; i++) {
 			int tempCount = 0;
 			ArrayList<Character> temp1 = new ArrayList<>(beadsList.subList(0, i));
+
+			for (int o = beadsList.size()-1; o >= i; o--) {
+				temp1.add(0, beadsList.get(o));
+			}
+
 			ArrayList<Character> temp2 = new ArrayList<>(beadsList.subList(i, beadsList.size()));
+
+			for (int p = 0; p < i; p++) {
+				temp2.add(temp2.size(), beadsList.get(p));
+			}
+//			System.out.println(temp1);
+//			System.out.println(temp2);
 
 			ArrayList<Character> temp3 = new ArrayList<>();
 			ArrayList<Character> temp4 = new ArrayList<>();
@@ -82,7 +93,7 @@ public class beads {
 				for (int k = temp1.size()-1; k >= 0; k--) {
 
 					if (temp1.get(k) == 'b' || temp1.get(k) == 'r') {
-						temp3 = new ArrayList<>(temp1.subList(0, k+1));
+						temp3 = new ArrayList<>(temp1.subList(0, k));
 						break;
 					}
 					++tempCount;
@@ -112,6 +123,7 @@ public class beads {
 					}
 				}
 			}
+//			System.out.printf("%d, %d\n", tempCount, longest);
 
 			if (temp2.get(0) == 'w') {
 				for (int c = 0; c < temp2.size(); c++) {
@@ -145,6 +157,7 @@ public class beads {
 					}
 				}
 			}
+//			System.out.printf("%d, %d\n", tempCount, longest);
 
 
 			// for loop through temp3 and temp4 using last and first values as checking point for rest
@@ -176,9 +189,10 @@ public class beads {
 			if (tempCount > longest) {
 				longest = tempCount;
 			}
-
-
-
+			if (longest > beadsList.size()) {
+				longest = beadsList.size();
+			}
+//			System.out.printf("%d, %d\n", tempCount, longest);
 		}
 
 		PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("beads.out")));
