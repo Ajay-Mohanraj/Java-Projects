@@ -146,7 +146,6 @@ public class beads {
 					}
 				}
 			}
-
 			else {
 				for (int d = 0; d < temp2.size(); d++) {
 					if (temp2.get(d) != 'b') {
@@ -158,10 +157,7 @@ public class beads {
 				}
 			}
 //			System.out.printf("%d, %d\n", tempCount, longest);
-
-
 			// for loop through temp3 and temp4 using last and first values as checking point for rest
-
 			if (temp3.size() != 0) {
 				char referenceTemp3 = temp3.get(temp3.size()-1);
 				for (int e = temp3.size()-1; e >= 0; e--) {
@@ -173,7 +169,6 @@ public class beads {
 					}
 				}
 			}
-
 			if (temp4.size() != 0) {
 				char referenceTemp4 = temp4.get(0);
 				for (int f = 0; f < temp4.size(); f++) {
@@ -185,7 +180,6 @@ public class beads {
 					}
 				}
 			}
-
 			if (tempCount > longest) {
 				longest = tempCount;
 			}
@@ -194,10 +188,7 @@ public class beads {
 			}
 //			System.out.printf("%d, %d\n", tempCount, longest);
 		}
-
 		PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("beads.out")));
-
-
 		out.println(longest);
 		out.close();
 		in.close();
