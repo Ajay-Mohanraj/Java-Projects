@@ -27,7 +27,7 @@ public class CircleController extends Application {
 				c.setRadius(c.getRadius()-1);
 			}
 		});
-
+//
 		pane.setOnKeyPressed(e -> {
 			if (e.getText().equals("0")) {
 				c.setFill(Color.CHARTREUSE);
