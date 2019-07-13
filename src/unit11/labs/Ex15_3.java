@@ -47,6 +47,9 @@ public class Ex15_3 extends Application {
             }
         });
 
+        pane.setOnKeyPressed(e -> {
+
+        });
         right.setOnAction(e -> {
 
             if (x < pane.getWidth()) {

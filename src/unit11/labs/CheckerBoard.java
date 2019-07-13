@@ -1,17 +1,30 @@
 package unit11.labs;
 
 import javafx.application.Application;
+import javafx.geometry.Insets;
 import javafx.scene.Scene;
+import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
+import javafx.scene.shape.Polygon;
 import javafx.stage.Stage;
 
 public class CheckerBoard extends Application {
 	GridPane gridPane = new GridPane();
 
+
 	public void start(Stage primaryStage) {
+		//gridPane.setPadding(new Insets(20, 20, 20, 20));
+		//gridPane.setHGap();
+		//gridPane.setVGap();
+		//gridPane.setConstraints();
+		//pane.getChildren.remove();
+		ColumnConstraints cc = new ColumnConstraints();
+		//https://docs.oracle.com/javafx/2/api/javafx/scene/layout/RowConstraints.html
+		//https://www.geeksforgeeks.org/javafx-polygon-with-examples/
+		Polygon a = new Polygon();
 
 		for (int column = 1; column <= 8; column++) {
 			for (int row = 1; row <= 8; row++) {

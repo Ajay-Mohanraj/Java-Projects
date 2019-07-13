@@ -12,48 +12,49 @@ import javafx.stage.Stage;
 
 public class CircleController extends Application {
 
-    private Circle c = new Circle(5);
+	private Circle c = new Circle(5);
 
-    public void start(Stage ps) {
+	public void start(Stage ps) {
 
-        Pane pane = new Pane();
+		Pane pane = new Pane();
 
-        pane.setOnMousePressed(e -> {
-            if (e.getButton() == MouseButton.PRIMARY) {
-                c.setRadius(c.getRadius()+1);
-            }
-            else if (e.getButton() == MouseButton.SECONDARY) {
-                c.setRadius(c.getRadius()-1);
-            }
-        });
 
-        pane.setOnKeyPressed(e -> {
-            if (e.getText().equals("0")) {
-                c.setFill(Color.CHARTREUSE);
-            }
-            else if (e.getText().equals("1")) {
-                c.setFill(Color.BLANCHEDALMOND);
-            }
-            else if (e.getCode() == KeyCode.UP) {
-                c.setRadius(c.getRadius()+1);
-            }
-            else if (e.getCode() == KeyCode.DOWN) {
-                c.setRadius(c.getRadius()-1);
-            }
-            else {
-                c.setFill(new Color(Math.random(), Math.random(), Math.random(), 1));
-            }
-        });
-        pane.getChildren().add(c);
-        c.setFill(Color.BLACK);
-        c.setFill(Color.BLACK);
+		pane.setOnMousePressed(e -> {
+			if (e.getButton() == MouseButton.PRIMARY) {
+				c.setRadius(c.getRadius()+1);
+			}
+			else if (e.getButton() == MouseButton.SECONDARY) {
+				c.setRadius(c.getRadius()-1);
+			}
+		});
 
-        c.centerXProperty().bind(pane.widthProperty().divide(2));
-        c.centerYProperty().bind(pane.heightProperty().divide(2));
+		pane.setOnKeyPressed(e -> {
+			if (e.getText().equals("0")) {
+				c.setFill(Color.CHARTREUSE);
+			}
+			else if (e.getText().equals("1")) {
+				c.setFill(Color.BLANCHEDALMOND);
+			}
+			else if (e.getCode() == KeyCode.UP) {
+				c.setRadius(c.getRadius()+1);
+			}
+			else if (e.getCode() == KeyCode.DOWN) {
+				c.setRadius(c.getRadius()-1);
+			}
+			else {
+				c.setFill(new Color(Math.random(), Math.random(), Math.random(), 1));
+			}
+		});
+		pane.getChildren().add(c);
+		c.setFill(Color.BLACK);
+		c.setFill(Color.BLACK);
 
-        Scene scene = new Scene(pane, 400, 400);
-        ps.setScene(scene);
-        ps.show();
-        pane.requestFocus();
-    }
+		c.centerXProperty().bind(pane.widthProperty().divide(2));
+		c.centerYProperty().bind(pane.heightProperty().divide(2));
+
+		Scene scene = new Scene(pane, 400, 400);
+		ps.setScene(scene);
+		ps.show();
+		pane.requestFocus();
+	}
 }
